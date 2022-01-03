@@ -30,3 +30,57 @@ void setup()
   mySerial.begin(9600);
 }
 
+void loop()
+{
+ while (mySerial.available())
+ {  
+  {  
+      data = mySerial.readStringUntil('\n');
+      //Serial.print(str);             
+  } 
+    
+    btVal = (data.toInt());
+    //Serial.print("BlueTooth Value ");
+    //Serial.println(btVal);    
+
+
+
+  switch (btVal) 
+   {
+      case 1:                                
+        //Serial.println("Forward");
+        forward();
+        break;
+
+      case 2:                 
+       //Serial.println("Reverse");
+        reverse();
+        break;
+
+      case 3:         
+       //Serial.println("Left");
+        left();
+        break;
+        
+      case 4:                     
+        //Serial.println("Right");
+        right();
+        break;
+        
+      case 5:                                            
+        //Serial.println("Stop");
+        stoprobot();
+        break;      
+
+  }
+
+ } 
+ 
+                                                              
+   if (mySerial.available() < 0)                              
+    {
+     //Serial.println("No Bluetooth Data ");          
+    }
+  
+}
+
