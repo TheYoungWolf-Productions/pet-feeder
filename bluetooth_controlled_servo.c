@@ -12,10 +12,10 @@ void setup()
 }
 void loop()
 {
-  if(bluetooth.available()>0)    //if bluetooth module is transmitting data
+  if(bluetooth.available()>0)    //if bluetooth module is transmitting the data
   {
     int pos=bluetooth.read(); // store the data in pos variable
     Serial.println(pos);
-    x.write(pos);             //move servo head to the given position
+    x.write(pos);             //move servo head to the selected position
   }
 }
