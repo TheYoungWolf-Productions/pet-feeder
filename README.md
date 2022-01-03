@@ -16,3 +16,6 @@ An Arduino based smart robotic car that can be remotely controlled using mobile 
 -	The hardware patched functions as intended.
 -	Passing Messages from application to Arduino and subsequently to servo motor.
 -	Mobile application to control the system
+
+## Result
+![image](https://user-images.githubusercontent.com/68595463/147966817-071f240b-9cf4-4aab-a3d5-60bafdea7873.png)
