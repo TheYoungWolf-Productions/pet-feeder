@@ -1,16 +1,14 @@
-# pet-feeder
+# robo-car
 
-The IoT system developed by our team is Smart Pet Feeder. This system is based on 2 components:
--	A Bluetooth module to control the motor
--	A motor to feed the pet
-The primary objective of this system is to feed the pet with just a button click on your smart phone. 
+In this project we make use of the Bluetooth technology to control our machine car. This machine can be controlled by any human using his android mobile phone, by downloading an app and connecting it with the Bluetooth module present inside our car. User can perform actions like moving forward, backward, moving left and right by the means of command using his-her mobile phone app. 
 
 ```TD;LR```
-An Arduino based smart pet feeding system that can be remotely controlled using mobile application via bluetooth.
+An Arduino based smart robotic car that can be remotely controlled using mobile application via bluetooth.
 
 
 ## CIRCUIT DIAGRAM
-![servo_MFi1fvR3di](https://user-images.githubusercontent.com/68595463/147902280-9228ff2a-f25d-41ff-a72b-981b3199785d.png)
+![image](https://user-images.githubusercontent.com/68595463/147965925-69ea9d0e-817d-46eb-9cfb-fc94a86af1af.png)
+
 
 ## Application requirements
 
