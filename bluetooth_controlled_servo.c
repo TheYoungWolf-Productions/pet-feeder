@@ -1,21 +1,32 @@
 #include<SoftwareSerial.h>
-#include<Servo.h>
-Servo x;
-int bttx=2;    //tx of bluetooth module is connected to pin 9 of arduino
-int btrx=3;    //rx of bluetooth module is connected to pin 10 of arduino
-SoftwareSerial bluetooth(bttx,btrx);
-void setup()
-{
-  x.attach(11);        // servo is connected to pin 11 of arduino
-  Serial.begin(9600);
-  bluetooth.begin(9600);
+
+#define IN1 12
+#define IN2 11
+#define IN3 10
+#define IN4 9
+//#define EN1 6
+//#define EN2 5
+
+SoftwareSerial mySerial(2, 3); // RX, TX
+
+String data;
+int btVal;
+
+void setup() 
+{  
+  //Serial.begin(115200);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+  //pinMode(EN1, OUTPUT);
+  //pinMode(EN2, OUTPUT);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+  //analogWrite(EN1,63);
+  //analogWrite(EN2,63);
+  mySerial.begin(9600);
 }
-void loop()
-{
-  if(bluetooth.available()>0)    // if bluetooth module is transmitting the data
-  {
-    int pos=bluetooth.read(); // store the data in pos variable
-    Serial.println(pos);
-    x.write(pos);             // move servo head to the selected position
-  }
-}
+
